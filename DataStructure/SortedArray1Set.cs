@@ -5,7 +5,7 @@ namespace DataStructure
     /// <summary>
     /// 有序数组集合
     /// 二分查找
-    /// contains为O(log n)
+    /// Contains为O(log n) 
     /// </summary>
     /// <typeparam name="Key"></typeparam>
     public class SortedArray1Set<Key> : ISet<Key> where Key : IComparable<Key>

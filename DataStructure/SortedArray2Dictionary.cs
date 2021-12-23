@@ -2,6 +2,11 @@
 
 namespace DataStructure
 {
+    /// <summary>
+    /// 有序数组映射
+    /// </summary>
+    /// <typeparam name="Key"></typeparam>
+    /// <typeparam name="Value"></typeparam>
     public class SortedArray2Dictionary<Key, Value> : IDictionary<Key, Value> where Key : IComparable<Key>
     {
         private SortedArray2<Key, Value> s2;

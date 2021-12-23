@@ -2,6 +2,10 @@
 
 namespace DataStructure
 {
+    /// <summary>
+    /// 有序数组
+    /// </summary>
+    /// <typeparam name="Key"></typeparam>
     public class SortedArray1<Key> where Key : IComparable<Key>
     {
         private Key[] keys;

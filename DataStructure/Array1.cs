@@ -12,9 +12,9 @@ namespace DataStructure
     /// Get,Set O(1)
     /// Add,Remove O(n)
     /// </summary>
-    public class Array1<TE> : IEnumerable
+    public class Array1<E> : IEnumerable
     {
-        private TE[] _data;//静态数组
+        private E[] _data;//静态数组
 
         public int Count { get; private set; }
 
@@ -25,7 +25,7 @@ namespace DataStructure
         public Array1(int capacity)
         {
             Count = 0;
-            _data = new TE[capacity];
+            _data = new E[capacity];
         }
 
         public Array1() : this(10)
@@ -38,7 +38,7 @@ namespace DataStructure
         /// </summary>
         /// <param name="index"></param>
         /// <param name="e"></param>
-        public void Add(int index, TE e)
+        public void Add(int index, E e)
         {
             if (index < 0 || index > Count)
             {
@@ -59,12 +59,12 @@ namespace DataStructure
             Count++;
         }
 
-        public void AddLast(TE e)
+        public void AddLast(E e)
         {
             Add(Count, e);
         }
 
-        public void AddFirst(TE e)
+        public void AddFirst(E e)
         {
             Add(0, e);
         }
@@ -74,7 +74,7 @@ namespace DataStructure
         /// </summary>
         /// <param name="index"></param>
         /// <returns></returns>
-        public TE Get(int index)
+        public E Get(int index)
         {
             if (index < 0 || index > Count)
             {
@@ -84,12 +84,12 @@ namespace DataStructure
             return _data[index];
         }
 
-        public TE GetFirst()
+        public E GetFirst()
         {
             return Get(0);
         }
 
-        public TE GetLast()
+        public E GetLast()
         {
             return Get(Count - 1);
         }
@@ -99,7 +99,7 @@ namespace DataStructure
         /// </summary>
         /// <param name="index"></param>
         /// <param name="newE"></param>
-        public void Set(int index, TE newE)
+        public void Set(int index, E newE)
         {
             if (index < 0 || index > Count)
             {
@@ -109,7 +109,7 @@ namespace DataStructure
             _data[index] = newE;
         }
 
-        public bool Contains(TE e)
+        public bool Contains(E e)
         {
             for (int i = 0; i < Count; i++)
             {
@@ -122,7 +122,7 @@ namespace DataStructure
             return false;
         }
 
-        public int IndexOf(TE e)
+        public int IndexOf(E e)
         {
             for (int i = 0; i < Count; i++)
             {
@@ -140,7 +140,7 @@ namespace DataStructure
         /// </summary>
         /// <param name="index"></param>
         /// <returns></returns>
-        public TE RemoveAt(int index)
+        public E RemoveAt(int index)
         {
             if (index < 0 || index > Count)
             {
@@ -165,17 +165,17 @@ namespace DataStructure
             return del;
         }
 
-        public TE RemoveFirst()
+        public E RemoveFirst()
         {
             return RemoveAt(0);
         }
 
-        public TE RemoveLast()
+        public E RemoveLast()
         {
             return RemoveAt(Count - 1);
         }
 
-        public void Remove(TE e)
+        public void Remove(E e)
         {
             int index = IndexOf(e);
             if (index < 0) return;
@@ -188,7 +188,7 @@ namespace DataStructure
         /// <param name="capacity"></param>
         public void ResetCapacity(int capacity)
         {
-            var newData = new TE[capacity];
+            var newData = new E[capacity];
             for (int i = 0; i < Count; i++)
             {
                 newData[i] = _data[i];

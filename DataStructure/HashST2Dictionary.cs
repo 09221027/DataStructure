@@ -2,6 +2,7 @@
 {
     /// <summary>
     /// 哈希表字典
+    /// Dictionary
     /// </summary>
     /// <typeparam name="Key"></typeparam>
     /// <typeparam name="Value"></typeparam>

@@ -3,7 +3,7 @@
 namespace DataStructure
 {
     /// <summary>
-    /// 红黑树
+    /// 红黑树映射
     /// SortedDictionary
     /// </summary>
     /// <typeparam name="Key"></typeparam>

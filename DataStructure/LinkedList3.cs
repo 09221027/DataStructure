@@ -2,6 +2,11 @@
 
 namespace DataStructure
 {
+    /// <summary>
+    /// 链表键值
+    /// </summary>
+    /// <typeparam name="Key"></typeparam>
+    /// <typeparam name="Value"></typeparam>
     public class LinkedList3<Key, Value>
     {
         private class Node

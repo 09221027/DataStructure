@@ -2,6 +2,10 @@
 
 namespace DataStructure
 {
+    /// <summary>
+    /// 二叉树集合
+    /// </summary>
+    /// <typeparam name="E"></typeparam>
     public class BST1Set<E> : ISet<E> where E : IComparable<E>
     {
         private BST1<E> bst;

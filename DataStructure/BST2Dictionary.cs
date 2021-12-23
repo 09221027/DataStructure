@@ -2,6 +2,11 @@
 
 namespace DataStructure
 {
+    /// <summary>
+    /// 二叉树映射
+    /// </summary>
+    /// <typeparam name="Key"></typeparam>
+    /// <typeparam name="Value"></typeparam>
     public class BST2Dictionary<Key, Value> : IDictionary<Key, Value> where Key : IComparable<Key>
     {
         private BST2<Key, Value> bst;
